@@ -6,7 +6,7 @@
   <body style='margin : 0px; overflow: hidden;'>
     <button id="play-button">Play</button>
 
-    <a-scene embedded arjs='trackingMethod: best;'>
+    <a-scene embedded arjs='trackingMethod: best;' >
       <a-assets>
           <video id="vid1" src="deko.mp4" muted loop="true"></video>
           <video id="vid2" src="chyams.mp4" muted loop="true"></video>
@@ -46,6 +46,9 @@
   width: 4em;
   height: 2em;
   z-index: 10;
+}
+#arjsDebugUIContainer {
+  display: none !important;
 }
 </style>
   </body>
