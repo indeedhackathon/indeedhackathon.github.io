@@ -4,9 +4,11 @@
 <!-- <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"> </script> -->
 <script src="./aframe-ar.js"></script>
   <body style='margin : 0px; overflow: hidden;'>
+    <button id="play-button">Play</button>
+
     <a-scene embedded arjs='trackingMethod: best;'>
       <a-assets>
-        <video id="vid4" src="sample.mp4" autoplay muted loop="true"></video>
+        <video id="vid4" src="sample.mp4"  muted loop="true"></video>
           <video id="vid1" src="deko.webm" autoplay muted loop="true"></video>
           <video id="vid2" src="chyams.webm" autoplay muted loop="true"></video>
           <video id="vid3" src="paul.webm" autoplay loop="true"></video>
@@ -25,5 +27,25 @@
 
     	<a-entity camera></a-entity>
     </a-scene>
+    <script>
+    var vid = document.getElementById('vid4');
+    console.log(vid);
+
+    document.getElementById('play-button').addEventListener("click", function(e){
+      this.style.display = 'none';
+      vid.play();
+    }, false);
+    </script>
+    <style>
+    #play-button {
+  position: fixed;
+  top: calc(50% - 1em);
+  left: calc(50% - 2em);
+  width: 4em;
+  height: 2em;
+  z-index: 10;
+}
+</style>
   </body>
+
 </html>
