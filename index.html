@@ -10,17 +10,17 @@
           <video id="vid2" src="chyams.webm" autoplay muted loop="true"></video>
           <video id="vid3" src="paul.webm" autoplay loop="true"></video>
       </a-assets>
-      <a-marker preset="deko">
+      <a-marker-camera preset="deko">
         <a-video src="#vid1" position='0 0 0' rotation="-90 0 0" ></a-video>
-    	</a-marker>
+    	</a-marker-camera>
 
-      <a-marker preset="chyams">
+      <a-marker-camera preset="chyams">
         <a-video src="#vid2" position="0 0 0" rotation="-90 0 0" ><a-video>
-      </a-marker>
+      </a-marker-camera>
 
-      <a-marker preset="paul">
+      <a-marker-camera preset="paul">
         <a-video src="#vid3" position="0 0 0" rotation="-90 0 0" ><a-video>
-      </a-marker>
+      </a-marker-camera>
 
     	<a-entity camera></a-entity>
     </a-scene>
