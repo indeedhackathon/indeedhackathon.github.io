@@ -9,9 +9,9 @@
     <a-scene embedded arjs='trackingMethod: best;'>
       <a-assets>
         <video id="vid4" src="sample.mp4"  muted loop="true"></video>
-          <video id="vid1" src="deko.webm" autoplay muted loop="true"></video>
-          <video id="vid2" src="chyams.webm" autoplay muted loop="true"></video>
-          <video id="vid3" src="paul.webm" autoplay loop="true"></video>
+          <video id="vid1" src="deko.webm" muted loop="true"></video>
+          <video id="vid2" src="chyams.webm" muted loop="true"></video>
+          <video id="vid3" src="paul.webm" loop="true"></video>
       </a-assets>
       <a-marker preset="deko">
         <a-video src="#vid4" position='0 0 0' rotation="-90 0 0" ></a-video>
@@ -28,12 +28,18 @@
     	<a-entity camera></a-entity>
     </a-scene>
     <script>
-    var vid = document.getElementById('vid4');
+    var vid4 = document.getElementById('vid4');
+    var vid1 = document.getElementById('vid1');
+    var vid2 = document.getElementById('vid2');
+    var vid3 = document.getElementById('vid3');
     console.log(vid);
 
     document.getElementById('play-button').addEventListener("click", function(e){
       this.style.display = 'none';
-      vid.play();
+      vid1.play();
+      vid2.play();
+      vid3.play();
+      vid4.play();
     }, false);
     </script>
     <style>
